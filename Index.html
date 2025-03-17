@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONALEP SALVATIERRA</title>
+    <link rel="shortcut icon" href="jose.png">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        /* Encabezado */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        /* Barra de Navegación */
+        .nav {
+            background-color: #007763;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            position: relative;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .nav ul li a:hover {
+            background-color: #005e4a;
+        }
+
+        /* Submenús */
+        .submenu {
+            display: none;
+            position: absolute;
+            background: #005e4a;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .submenu li a:hover {
+            background: #f1f1f1;
+        }
+
+        /* Mostrar Submenú al Pasar Cursor */
+        .nav ul li:hover .submenu {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="/IMAGENES/Conalep-logo.png" alt="Conalep">
+        <img src="/IMAGENES/Logo-Gto.png" alt="Logo GTO">
+        <img src="/IMAGENES/salvatierra.png" alt="Salvatierra">
+        <img src="/IMAGENES/sep.png" alt="SEP">
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+    
+            <li>
+                <a href="#" class="menu-item">Acerca del Plantel ▼</a>
+                <ul class="submenu">
+                    <li><a href="/pages/ACERCA%20DEL%20PLANTEL.HTML">Acerca del Plantel</a></li>
+                    <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué estudiar en Conalep?</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#" class="menu-item">Servicios Escolares ▼</a>
+                <ul class="submenu">
+                    <li><a href="/pages/Servisios/Filosofia.html">Filosofía Institucional</a></li>
+                    <li><a href="/pages/Servisios/REGLAMENTO.HTML">Reglamento Escolar</a></li>
+                    <li><a href="/pages/Servisios/Protocolo.html">Protocolo de Prevención</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#" class="menu-item">Admisiones ▼</a>
+                <ul class="submenu">
+                    <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué Estudiar en CONALEP?</a></li>
+                    <li><a href="/pages/Proceso%20de%20Admisión.html">Proceso de Admisión</a></li>
+                    <li><a href="https://alumno.conalep.edu.mx/saac/">Reinscripción</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=SiKPZbnIfGE">Manual de Reinscripción en Línea</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#" class="menu-item">Oferta Académica ▼</a>
+                <ul class="submenu">
+                    <li><a href="/pages/Carreras/PTB%20Administración.html">PTB Administración</a></li>
+                    <li><a href="/pages/Carreras/PTB%20Enfermería.html">PTB Enfermería</a></li>
+                    <li><a href="/pages/Carreras/PTB%20Informática.html">PTB Informática</a></li>
+                    <li><a href="/pages/Carreras/PTB%20Motores%20a%20Diesel.html">PTB Motores a Diesel</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#" class="menu-item">Recursos ▼</a>
+                <ul class="submenu">
+                    <li><a href="https://www.fundacionbancaja.es/homecas.asp">Biblioteca Ciberoteca</a></li>
+                    <li><a href="https://www.eumed.net/cursecon/libreria/">Enciclopedia Virtual</a></li>
+                    <li><a href="https://www.bibliotecademexico.gob.mx/">Biblioteca de México</a></li>
+                </ul>
+            </li>
+    
+            <li>
+                <a href="#" class="menu-item">Vinculación ▼</a>
+                <ul class="submenu">
+                    <li><a href="http://www.cast.conalep-guanajuato.edu.mx/">Empresas y Empresarios</a></li>
+                    <li><a href="https://sistemas2.conalep-guanajuato.edu.mx/exaconalep/contenido/log.aspx">Bolsa de Empleo</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <section>
+        <ul>
+            <li><a href="#"><img src="IMAGENES/FICHA.jpg" width="400px"></a></li>
+            <li><a href="#"><img src="IMAGENES/DESCUBRE CONALEP.jpg" width="400px"></a></li>
+        </ul>
+    </section>
+
+    <section>
+        <table border="1">
+            <tr>
+                <td><img src="IMAGENES/enfermeria.jpg" width="100px"></td>
+                <td><img src="IMAGENES/informatica.jpg" width="100px"></td>
+                <td><img src="IMAGENES/administracion.jpg" width="100px"></td>
+                <td><img src="IMAGENES/motores.jpg" width="100px"></td>
+            </tr>
+            <tr>
+                <td><a href="https://alumno.conalep.edu.mx/saac/"><button>Acceder</button></a></td>
+                <td><a href="https://www.conalep.edu.mx/"><button>Acceder</button></a></td>
+                <td><a href="https://alumno.conalep.edu.mx/saac/"><button>Acceder</button></a></td>
+                <td><a href="https://login.microsoftonline.com/fbb8d660/oauth2/authorize"><button>Acceder</button></a></td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section>
+        <div>
+            <h3>Acerca de Nosotros</h3>
+            <p>El Colegio Nacional de Educación Profesional Técnica del Estado de Guanajuato, Plantel CONALEP 249 Salvatierra, es una institución educativa de nivel medio superior...</p>
+        </div>
+        <div>
+            <h3>Conócenos</h3>
+            <p>¿Qué es CONALEP?</p>
+            <video controls autoplay>
+                <source src="VIDEOS/Que es conalep.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <h3>Contacto</h3>
+            <p>Dirección: Salvatierra - Yuriria, 38930 Salvatierra, Gto.</p>
+            <p>Teléfono: 466 665 5483</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="IMAGENES/orgullosamente conalep.png" width="200px" alt="Orgullosamente CONALEP">
+        <p>Dirección: Salvatierra - Yuriria, 38930 Salvatierra, Gto.</p>
+        <img src="IMAGENES/personas conalep.jpg" width="200px" alt="Personas CONALEP">
+    </footer>
+
+    <script>
+      document.querySelectorAll('.menu-item').forEach(item => {
+          item.addEventListener('click', (event) => {
+              event.preventDefault();
+              let submenu = item.nextElementSibling;
+              document.querySelectorAll('.submenu').forEach(sub => {
+                  if (sub !== submenu) {
+                      sub.style.display = 'none';
+                  }
+              });
+              submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+          });
+      });
+
+      document.addEventListener('click', (event) => {
+          if (!event.target.closest('.menu-item')) {
+              document.querySelectorAll('.submenu').forEach(sub => {
+                  sub.style.display = 'none';
+              });
+          }
+      });
+  </script>
+
+</body>
+</html>

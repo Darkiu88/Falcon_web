@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motores a Diesel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+        background: #ffffff;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+      }
+      .header img {
+        height: 50px;
+      }
+        h1 {
+            background: #1e8a06e2;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        }
+        .image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background: #004b23;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .nav {
+            background-color: #007763;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            position: relative;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .nav ul li a:hover {
+            background-color: #005e4a;
+        }
+
+        /* Submenús */
+        .submenu {
+            display: none;
+            position: absolute;
+            background: #005e4a;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .submenu li a:hover {
+            background: #f1f1f1;
+        }
+
+        /* Mostrar Submenú al Pasar Cursor */
+        .nav ul li:hover .submenu {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="img_nav">
+          <span
+            ><img src="/IMAGENES/Conalep-logo.png" alt="salvatierra" width="100px"
+          /></span>
+        </div>
+        <div class="img_nav">
+          <span
+            ><img src="/IMAGENES/Logo-Gto.png" alt="Logo-Gto" width="100px"
+          /></span>
+        </div>
+        <div class="img_nav">
+          <span
+            ><img src="/IMAGENES/salvatierra.png" alt="salvatierra" width="100px"
+          /></span>
+        </div>
+        <div class="img_nav">
+          <span><img src="/IMAGENES/sep.png" alt="sep" width="100px" /></span>
+        </div>
+      </div>
+    <div class="container">
+        <h1>Motores a Diesel</h1>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+        
+                <li>
+                    <a href="#" class="menu-item">Acerca del Plantel ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/ACERCA%20DEL%20PLANTEL.HTML">Acerca del Plantel</a></li>
+                        <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué estudiar en Conalep?</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#" class="menu-item">Servicios Escolares ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/Servisios/Filosofia.html">Filosofía Institucional</a></li>
+                        <li><a href="/pages/Servisios/REGLAMENTO.HTML">Reglamento Escolar</a></li>
+                        <li><a href="/pages/Servisios/Protocolo.html">Protocolo de Prevención</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#" class="menu-item">Admisiones ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué Estudiar en CONALEP?</a></li>
+                        <li><a href="/pages/Proceso%20de%20Admisión.html">Proceso de Admisión</a></li>
+                        <li><a href="https://alumno.conalep.edu.mx/saac/">Reinscripción</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=SiKPZbnIfGE">Manual de Reinscripción en Línea</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#" class="menu-item">Oferta Académica ▼</a>
+                    <ul class="submenu">
+                        <li><a href="/pages/Carreras/PTB%20Administración.html">PTB Administración</a></li>
+                        <li><a href="/pages/Carreras/PTB%20Enfermería.html">PTB Enfermería</a></li>
+                        <li><a href="/pages/Carreras/PTB%20Informática.html">PTB Informática</a></li>
+                        <li><a href="/pages/Carreras/PTB%20Motores%20a%20Diesel.html">PTB Motores a Diesel</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#" class="menu-item">Recursos ▼</a>
+                    <ul class="submenu">
+                        <li><a href="https://www.fundacionbancaja.es/homecas.asp">Biblioteca Ciberoteca</a></li>
+                        <li><a href="https://www.eumed.net/cursecon/libreria/">Enciclopedia Virtual</a></li>
+                        <li><a href="https://www.bibliotecademexico.gob.mx/">Biblioteca de México</a></li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#" class="menu-item">Vinculación ▼</a>
+                    <ul class="submenu">
+                        <li><a href="http://www.cast.conalep-guanajuato.edu.mx/">Empresas y Empresarios</a></li>
+                        <li><a href="https://sistemas2.conalep-guanajuato.edu.mx/exaconalep/contenido/log.aspx">Bolsa de Empleo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <p>
+            Realizar los servicios de reparación y mantenimiento a vehículos y unidades a diésel
+            en sus sistemas mecánicos, eléctricos, electrónicos y equipo complementario, utilizando
+            las especificaciones técnicas de los manuales del fabricante y aplicando las normas técnicas
+            vigentes y estándares de calidad.
+        </p>
+
+        <div class="image">
+            <img src="/IMAGENES/motores.jpg" alt="Motores a Diesel">
+        </div>
+
+        <h2>Más información</h2>
+        <div class="button-container">
+            <a class="button" href="https://conalepjalisco.edu.mx/docs-portal/escolares/mapas-perfiles/perfil-motores-diesel-feb2020.pdf">
+                📄 Ver perfil de PTB en Motores a Diesel
+            </a>
+            <a class="button" href="https://www.conalep.edu.mx/sites/default/files/secacad/Mapa_Curricular_MOTORES%20A%20DIESEL.pdf">
+                📘  Ver mapa curricular
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        Dirección: Salvatierra - Yuriria, 38930 Salvatierra, Gto. <br>
+        Teléfono: 466 665 5483 <br>
+        Horario: Abierto ⋅ Cierra a las 5 p.m.
+    </footer>
+
+</body>
+</html>

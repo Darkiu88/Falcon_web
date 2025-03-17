@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTB Enfermería</title>
+
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        .header {
+          background: #ffffff;
+          color: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+        }
+        .header img {
+          height: 50px;
+        }
+        .container {
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 20px;
+        }
+        .image img {
+          width: 300px;
+        }
+        .text {
+          flex: 1;
+        }
+        .title-box {
+          background: #1e8a06e2;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .button-container {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin: 20px;
+        }
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px 20px;
+          font-size: 16px;
+          color: white;
+          background-color: #007bff;
+          border: none;
+          border-radius: 50px;
+          text-decoration: none;
+          cursor: pointer;
+          transition: background 0.3s;
+        }
+        .button:hover {
+          background-color: #0056b3;
+        }
+        .footer {
+          background: #004b23;
+          color: white;
+          text-align: center;
+          padding: 20px;
+          margin-top: 20px;
+        }
+        .img_nav {
+          border-radius: 25%;
+          background-color: rgb(250, 244, 244);
+        }
+
+        .nav {
+            background-color: #007763;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav ul li {
+            position: relative;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 12px 18px;
+            display: block;
+            font-size: 16px;
+        }
+
+        .nav ul li a:hover {
+            background-color: #005e4a;
+        }
+
+        /* Submenús */
+        .submenu {
+            display: none;
+            position: absolute;
+            background: #005e4a;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        .submenu li {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .submenu li a:hover {
+            background: #f1f1f1;
+        }
+
+        /* Mostrar Submenú al Pasar Cursor */
+        .nav ul li:hover .submenu {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+      </style>
+</head>
+
+<body>
+    <div class="header">
+      <div class="img_nav">
+        <span
+          ><img src="/IMAGENES/Conalep-logo.png" alt="salvatierra" width="100px"
+        /></span>
+      </div>
+      <div class="img_nav">
+        <span
+          ><img src="/IMAGENES/Logo-Gto.png" alt="Logo-Gto" width="100px"
+        /></span>
+      </div>
+      <div class="img_nav">
+        <span
+          ><img src="/IMAGENES/salvatierra.png" alt="salvatierra" width="100px"
+        /></span>
+      </div>
+      <div class="img_nav">
+        <span><img src="/IMAGENES/sep.png" alt="sep" width="100px" /></span>
+      </div>
+    </div>
+
+
+    <div class="title-box">Enfermeria</div>
+
+    <nav class="nav">
+      <ul>
+          <li><a href="Index.html">Inicio</a></li>
+  
+          <li>
+              <a href="#" class="menu-item">Acerca del Plantel ▼</a>
+              <ul class="submenu">
+                  <li><a href="/pages/ACERCA%20DEL%20PLANTEL.HTML">Acerca del Plantel</a></li>
+                  <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué estudiar en Conalep?</a></li>
+              </ul>
+          </li>
+  
+          <li>
+              <a href="#" class="menu-item">Servicios Escolares ▼</a>
+              <ul class="submenu">
+                  <li><a href="/pages/Servisios/Filosofia.html">Filosofía Institucional</a></li>
+                  <li><a href="/pages/Servisios/REGLAMENTO.HTML">Reglamento Escolar</a></li>
+                  <li><a href="/pages/Servisios/Protocolo.html">Protocolo de Prevención</a></li>
+              </ul>
+          </li>
+  
+          <li>
+              <a href="#" class="menu-item">Admisiones ▼</a>
+              <ul class="submenu">
+                  <li><a href="/pages/Por%20que%20estudiar%20en%20conalep.html">¿Por qué Estudiar en CONALEP?</a></li>
+                  <li><a href="/pages/Proceso%20de%20Admisión.html">Proceso de Admisión</a></li>
+                  <li><a href="https://alumno.conalep.edu.mx/saac/">Reinscripción</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=SiKPZbnIfGE">Manual de Reinscripción en Línea</a></li>
+              </ul>
+          </li>
+  
+          <li>
+              <a href="#" class="menu-item">Oferta Académica ▼</a>
+              <ul class="submenu">
+                  <li><a href="/pages/Carreras/PTB%20Administración.html">PTB Administración</a></li>
+                  <li><a href="/pages/Carreras/PTB%20Enfermería.html">PTB Enfermería</a></li>
+                  <li><a href="/pages/Carreras/PTB%20Informática.html">PTB Informática</a></li>
+                  <li><a href="/pages/Carreras/PTB%20Motores%20a%20Diesel.html">PTB Motores a Diesel</a></li>
+              </ul>
+          </li>
+  
+          <li>
+              <a href="#" class="menu-item">Recursos ▼</a>
+              <ul class="submenu">
+                  <li><a href="https://www.fundacionbancaja.es/homecas.asp">Biblioteca Ciberoteca</a></li>
+                  <li><a href="https://www.eumed.net/cursecon/libreria/">Enciclopedia Virtual</a></li>
+                  <li><a href="https://www.bibliotecademexico.gob.mx/">Biblioteca de México</a></li>
+              </ul>
+          </li>
+  
+          <li>
+              <a href="#" class="menu-item">Vinculación ▼</a>
+              <ul class="submenu">
+                  <li><a href="http://www.cast.conalep-guanajuato.edu.mx/">Empresas y Empresarios</a></li>
+                  <li><a href="https://sistemas2.conalep-guanajuato.edu.mx/exaconalep/contenido/log.aspx">Bolsa de Empleo</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+
+    <div class="container">
+      <div class="image">
+        <img src="/IMAGENES/enfermeria.jpg" alt="Imagen sobre enfermeria" />
+      </div>
+      <div class="text">
+
+    <h1>Enfermería</h1>
+
+    <p>Proporcionar cuidados generales de enfermería a personas sanas o enfermas
+     en los tres niveles de atención y participar en acciones derivadas de las 
+     funciones docente y administrativa, cuyo ámbito de competencia está determinado
+     por la ejecución de intervenciones como resultado de la atención médica y de la 
+     aplicación del proceso de atención de enfermería, cuyas actividades están encaminadas
+     a proteger, mantener, promover, mejorar o restablecer la salud acorde con los requerimientos,
+     necesidades e interculturalidad de la población que atiende.</p>
+
+    </div>
+</div>
+
+<div class="button-container">
+  <a
+    href="https://www.conalep.edu.mx/sites/default/files/secacad/PERFIL%20INFORMA%CC%81TICA%20%202018.pdf"
+    class="button"
+    >📄 Perfil de Egreso</a
+  >
+  <a
+    href="https://www.conalep.edu.mx/sites/default/files/secacad/Mapa_Curricular_INFORMA%CC%81TICA.pdf"
+    class="button"
+    >📘 Mapa Curricular</a
+  >
+</div>
+
+<div class="footer">
+  <p>
+    Dirección: Salvatierra - Yuriria, 38930 Salvatierra, Gto.<br />
+    Teléfono: 466 665 5483<br />
+    Horario: Abierto ⋅ Cierra a las 5 p.m.
+  </p>
+</div>
+<script>
+  document.querySelectorAll('.menu-item').forEach(item => {
+      item.addEventListener('click', (event) => {
+          event.preventDefault();
+          let submenu = item.nextElementSibling;
+          document.querySelectorAll('.submenu').forEach(sub => {
+              if (sub !== submenu) {
+                  sub.style.display = 'none';
+              }
+          });
+          submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+
+  document.addEventListener('click', (event) => {
+      if (!event.target.closest('.menu-item')) {
+          document.querySelectorAll('.submenu').forEach(sub => {
+              sub.style.display = 'none';
+          });
+      }
+  });
+</script>
+</body>
+
+</html>
