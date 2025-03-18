@@ -5,100 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONALEP SALVATIERRA</title>
     <link rel="shortcut icon" href="jose.png">
+    <link rel="stylesheet" href="/css/index.css">
     <style>
         /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
-
-        /* Encabezado */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: white;
-        }
-
-        .header img {
-            height: 60px;
-        }
-
-        /* Barra de Navegación */
-        .nav {
-            background-color: #007763;
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-        }
-
-        .nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .nav ul li {
-            position: relative;
-        }
-
-        .nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 12px 18px;
-            display: block;
-            font-size: 16px;
-        }
-
-        .nav ul li a:hover {
-            background-color: #005e4a;
-        }
-
-        /* Submenús */
-        .submenu {
-            display: none;
-            position: absolute;
-            background: #005e4a;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            top: 100%;
-            left: 0;
-            width: 220px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-            z-index: 1000;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-        }
-
-        .submenu li {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .submenu li a {
-            padding: 10px;
-            color: #333;
-            text-decoration: none;
-            display: block;
-            font-size: 14px;
-        }
-
-        .submenu li a:hover {
-            background: #f1f1f1;
-        }
-
-        /* Mostrar Submenú al Pasar Cursor */
-        .nav ul li:hover .submenu {
-            display: block;
-            visibility: visible;
-            opacity: 1;
-        }
+      
     </style>
 </head>
 
@@ -205,7 +115,10 @@
             <h3>Conócenos</h3>
             <p>¿Qué es CONALEP?</p>
             <video controls autoplay>
-                <source src="VIDEOS/Que es conalep.mp4" type="video/mp4">
+                <source src="/VIDEOS/Que es conlep.mp4" type="video/mp4">
+            </video>
+            <video controls autoplay>
+                <source src="/VIDEOS/Somos Gente CONALEP Gto.mp4" type="video/mp4">
             </video>
         </div>
         <div>
