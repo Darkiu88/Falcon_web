@@ -60,13 +60,38 @@ font-weight: bold;
 .button:hover {
     background-color: #0056b3;
 }
-footer {
-    background: #004b23;
-    color: white;
+.footer {
+    background: #ebebeb;
+    color: #0c0c0c;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     margin-top: 20px;
-}
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .left-image, .right-image {
+    width: 150px;
+    object-fit: cover;
+  }
+  
+  .footer-text {
+    flex: 1;
+    padding: 0 20px;
+    max-width: 400px;
+  }
+  
+
+
+
 .nav {
     background-color: #007763;
     display: flex;
