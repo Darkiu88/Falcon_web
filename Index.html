@@ -80,12 +80,15 @@
         </ul>
     </nav>
 
-    <section>
-        <ul>
-            <li><a href="#"><img src="IMAGENES/FICHA.jpg" width="400px"></a></li>
-            <li><a href="#"><img src="IMAGENES/DESCUBRE CONALEP.jpg" width="400px"></a></li>
-        </ul>
+    <section class="carousel">
+        <div class="carousel-container">
+           <img src="IMAGENES/FICHA.jpg"  class="carousel-image active">
+           <img src="IMAGENES/DESCUBRE CONALEP.jpg" class="carousel-image">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
     </section>
+    
 
     <section>
         <table border="1">
@@ -210,6 +213,26 @@
           }
       });
   </script>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".carousel-image");
+
+    function showSlides(index) {
+        slides.forEach(slide => slide.style.display = "none");
+        slides[index].style.display = "block";
+    }
+
+    function moveSlide(step) {
+        slideIndex += step;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        showSlides(slideIndex);
+    }
+
+    setInterval(() => moveSlide(1), 5000);
+    showSlides(slideIndex);
+</script>
 
 </body>
 </html>
