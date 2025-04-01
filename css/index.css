@@ -189,41 +189,98 @@ body {
 
 
 
-.carousel {
-    position: relative;
-    width: 200%;          /* Ancho ajustable según el contenedor */
-    max-width: 1000px;    /* Puedes ajustar el máximo ancho del carrusel si lo deseas */
-    height: 500px;        /* Altura ajustable del carrusel */
-    margin: auto;
-    overflow: hidden;
-}
-
-.carousel-container {
+.imagenes img {
+    width: 440px;
+    height: 300px;
+ }
+ 
+ .imagenes ul {
+    list-style: none;
     display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-image {
-    width: 1200%;          /* Asegura que las imágenes cubran todo el ancho */
-    height: 100%;         /* Asegura que las imágenes cubran toda la altura */
-    object-fit: cover;    /* Hace que las imágenes cubran el área sin distorsión */
-    display: none;
-}
-
-.carousel-image.active {
-    display: block;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(125, 110, 110, 0.5);
-    color: rgb(255, 255, 255);
-    border: none;
+    animation: slide 20s infinite alternate;
+ }
+ 
+ .imagenes{
+    position: relative;
+    width: 450px;
+    height: 300px;
+    margin: 40px auto;
+    overflow: hidden;
     padding: 10px;
-    cursor: pointer;
-}
-
-.prev { left: 0; }
-.next { right: 0; }
+ }
+ 
+ @keyframes slide {
+   0%{margin-left: 0px;}
+   20%{margin-left: 0px;}
+   25%{margin-left: -470px;}
+   45%{margin-left: -470px;}
+   50%{margin-left: -918px;}
+   70%{margin-left: -918px;}
+   75%{margin-left: -1365px;}
+   100%{margin-left: -1365px;}
+ }
+ 
+ .carrusel {
+    background:linear-gradient(rgb(60, 157, 202),white); 
+ }  
+ 
+ .tabla {
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    padding: 10px;
+    background: linear-gradient(to bottom left, rgb(8, 8, 8), rgb(131, 236, 166), rgb(8, 8, 8));
+ }
+ 
+ .tabla img {
+    width: 270px;
+    height: 200px;
+ }
+ 
+ .tabla p,a {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .Acerca {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ .acer {
+    width: 20%;
+    margin: 10px;
+    padding: 10px;
+ }
+ 
+ .acer pre {
+    text-align: justify-all;
+ }
+ 
+ .videos {
+    width: 30%;
+    display: black;
+ }
+ 
+ .videos video {
+    width: 250px;
+ }
+ 
+ .direc {
+    width: 20%;
+ }
+ 
+ footer {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ footer img {
+    width: 200px;
+    height: 150px;
+ }
+ 
+ nav:hover {
+    position: relative;
+    z-index: 1;
+ }
