@@ -10,9 +10,16 @@
         /* Estilos generales */
       
     </style>
+    <script src="js/miscript.js"></script>
 </head>
 
 <body>
+
+    <div><button onclick="fondo1()"> Fondo 1 </button>
+        <button onclick="fondo2()"> Fondo 2 </button>
+        <button onclick="fondo3()"> Fondo 3 </button>
+   </div>
+   
     <header class="header">
         <img src="/IMAGENES/Conalep-logo.png" alt="Conalep">
         <img src="/IMAGENES/Logo-Gto.png" alt="Logo GTO">
@@ -95,10 +102,10 @@
     <section>
         <table border="1">
             <tr>
-                <td><img  class="img_table"    src="IMAGENES/enfermeria.jpg" width="200px"></td>
-                <td><img  class="img_table"    src="IMAGENES/informatica.jpg" width="200px"></td>
-                <td><img  class="img_table"    src="IMAGENES/administracion.jpg" width="200px"></td>
-                <td><img  class="img_table"    src="IMAGENES/motores.jpg" width="200px"></td>
+                <td><img  class="img_table"    src="IMAGENES/enfermeria.jpg" width="200px" id="imagen07" onclick="link('imagen07','https://siia.conalepmex.edu.mx/siia/login')"></td>
+                <td><img  class="img_table"    src="IMAGENES/informatica.jpg" width="200px" id="imagen08" onclick="link('imagen08','https://siia.conalepmex.edu.mx/siia/login') " ></td>
+                <td><img  class="img_table"    src="IMAGENES/administracion.jpg" width="200px" id="imagen09" onclick="link('imagen09','https://siia.conalepmex.edu.mx/siia/login')"></td>
+                <td><img  class="img_table"    src="IMAGENES/motores.jpg" width="200px" id="imagen10" onclick="link('imagen10','https://siia.conalepmex.edu.mx/siia/login')"></td>
             </tr>
             <tr>
                 <td><a href="https://alumno.conalep.edu.mx/saac/"><button>Acceder</button></a></td>
@@ -109,7 +116,7 @@
             <tr>
                 <td><img src="IMAGENES/SISTEMA DE PASE  DE ASISTENCIA DE ALUMNOS.jpg" alt="" width="200 py"></td>
                 <td><img src="IMAGENES/lectores.webp" alt="" width="200 px"></td>
-                <td><img src="IMAGENES/CONTRUYE T.webp" alt="" width="200 px">></td>
+                <td><img src="IMAGENES/CONTRUYE T.webp" alt="" width="200 px"></td>
                 <td><img src="IMAGENES/sems.webp" alt="" width="200 px"></td>
                </tr>
         </table>
@@ -117,6 +124,13 @@
 
     <hr>
 
+    <section class="acerca" id="acerca">
+        <p>Este es un texto de ejemplo que se puede aumentar o disminuir.</p>
+      </section>
+      
+      <button onclick="aumentar()">A+</button>
+      <button onclick="disminuir()">A-</button>
+      
     <section class="section_acercade">
         <div class="Acecade">
             <h3>Acerca de Nosotros</h3>
@@ -234,7 +248,43 @@
 
     setInterval(() => moveSlide(1), 5000);
     showSlides(slideIndex);
+
+
+    //Funcion de fondos
+    
+
+
 </script>
 
+<script>
+    // Obtener todos los elementos del menú que deben desplegarse con clic
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    menuItems.forEach((item) => {
+      item.addEventListener("click", function (event) {
+        event.preventDefault(); // Evitar que el enlace recargue la página
+
+        // Cerrar otros submenús antes de abrir uno nuevo
+        document.querySelectorAll(".nav > ul > li").forEach((li) => {
+          if (li !== this.parentElement) {
+            li.classList.remove("active");
+          }
+        });
+
+        // Alternar el submenú de la opción seleccionada
+        this.parentElement.classList.toggle("active");
+      });
+    });
+
+    // Cerrar submenús si se hace clic fuera del menú
+    document.addEventListener("click", function (event) {
+      if (!event.target.closest(".nav")) {
+        document.querySelectorAll(".nav > ul > li").forEach((li) => {
+          li.classList.remove("active");
+        });
+      }
+    });
+  </script>
+ 
 </body>
 </html>
